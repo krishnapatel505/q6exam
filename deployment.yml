@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q6deployment
+  labels:
+    app: pages
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pages
+  template:
+    metadata:
+      labels:
+        app: pages
+    spec:
+      containers:
+        - name: containername
+          image: krishna0412/devopsfinalexamq2
